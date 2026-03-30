@@ -42,12 +42,6 @@ const Signin = () => {
 
             // Use auth context to set authentication state
             login(response.token, response.data)
-
-            // Show success message briefly before redirect
-            alert('Login successful! Redirecting...')
-
-            // Redirect to dashboard
-            navigate('/dashboard')
         } catch (err) {
             const errorMessage = err.message || 'Login failed. Please try again.'
 
