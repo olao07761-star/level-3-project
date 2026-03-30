@@ -1,9 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5555' : '');
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5555';
 
 export const signup = async (userData) => {
-    if (!API_BASE_URL) {
-        throw new Error('VITE_API_URL is not configured for production');
-    }
 
     try {
         const response = await fetch(`${API_BASE_URL}/api/signup`, {
@@ -27,9 +24,6 @@ export const signup = async (userData) => {
 };
 
 export const login = async (credentials) => {
-    if (!API_BASE_URL) {
-        throw new Error('VITE_API_URL is not configured for production');
-    }
 
     try {
         const response = await fetch(`${API_BASE_URL}/api/login`, {
