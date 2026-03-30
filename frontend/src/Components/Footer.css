@@ -1,0 +1,394 @@
+/* Footer */
+.footer {
+    background-color: #000000;
+    color: #a0a9b8;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Brand Section */
+.footer-brand {
+    grid-column: 1;
+
+
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-logo-img {
+    width: 10rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.footer-logo-text .logo-orange {
+    color: #EC7F13;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a0a9b8;
+    font-weight: 900;
+    text-align: center;
+
+}
+
+/* Section Titles */
+.footer-section-title {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+.footer-links,
+.footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-info li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #a0a9b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #EC7F13;
+    padding-left: 0.5rem;
+    transform: translateX(0.5rem);
+}
+
+.footer-info span {
+    font-size: 0.95rem;
+    color: #a0a9b8;
+    font-weight: 600;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid rgba(224, 224, 224, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #7a8392;
+    margin: 0;
+    font-weight: 600;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-bottom-links a {
+    color: #a0a9b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #EC7F13;
+}
+
+/* Chat Button */
+.footer-chat-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #EC7F13;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(236, 127, 19, 0.3);
+    z-index: 1000;
+}
+
+.footer-chat-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(236, 127, 19, 0.4);
+}
+
+.footer-chat-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 2.5rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .footer-section-title {
+        font-size: 1rem;
+    }
+
+    .footer-links a,
+    .footer-info span {
+        font-size: 0.9rem;
+    }
+
+    .footer-description {
+        font-size: 0.9rem;
+    }
+
+    .footer-logo-img {
+        width: 5rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.25rem;
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        grid-column: 1;
+    }
+
+    .footer-logo {
+        margin-bottom: 1.2rem;
+    }
+
+    .footer-logo-img {
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .footer-logo-text {
+        font-size: 1.3rem;
+    }
+
+    .footer-description {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .footer-section-title {
+        font-size: 0.95rem;
+        font-weight: 900;
+        margin-bottom: 1.2rem;
+    }
+
+    .footer-links a,
+    .footer-info span {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom-links {
+        gap: 1.5rem;
+    }
+
+    .footer-bottom-links a {
+        font-size: 0.85rem;
+    }
+
+    .footer-chat-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-chat-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-container {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer-logo {
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo-img {
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .footer-logo-text {
+        font-size: 1.2rem;
+    }
+
+    .footer-description {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .footer-section-title {
+        font-size: 0.9rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links li,
+    .footer-info li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-links a,
+    .footer-info span {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .footer-bottom {
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+
+    .footer-bottom-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom-links a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 1.2rem 0.75rem;
+        gap: 1.2rem;
+    }
+
+    .footer-logo-img {
+        width: 5rem;
+        height: 3rem;
+    }
+
+    .footer-logo-text {
+        font-size: 1rem;
+    }
+
+    .footer-description {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .footer-section-title {
+        font-size: 0.85rem;
+        font-weight: 900;
+    }
+
+    .footer-links a,
+    .footer-info span {
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .footer-bottom {
+        padding: 1rem 0.75rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .footer-bottom-links a {
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .footer-chat-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .footer-chat-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}

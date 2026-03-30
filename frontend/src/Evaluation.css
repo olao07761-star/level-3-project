@@ -1,0 +1,280 @@
+.evaluation-page {
+    min-height: calc(100vh - 80px);
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.evaluation-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.evaluation-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a1d29;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.evaluation-subtitle {
+    text-align: center;
+    color: #5a6c7d;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.evaluation-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.evaluation-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a1d29;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #EC7F13;
+    box-shadow: 0 0 0 3px rgba(236, 127, 19, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #5a6c7d;
+    font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+    cursor: pointer;
+    width: auto;
+}
+
+.btn-evaluate {
+    width: 100%;
+    padding: 15px;
+    background: #EC7F13;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-evaluate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(236, 127, 19, 0.4);
+}
+
+.evaluation-result {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-result h2 {
+    text-align: center;
+    color: #1a1d29;
+    font-weight: 900;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.value-display {
+    text-align: center;
+    padding: 30px;
+    background: #EC7F13;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.value-label {
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.value-amount {
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.recommendations h3 {
+    color: #1a1d29;
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.recommendations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendations li {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #EC7F13;
+    border-radius: 4px;
+    color: #5a6c7d;
+    font-weight: 500;
+}
+
+.btn-proceed {
+    width: 100%;
+    padding: 15px;
+    background: #1a1d29;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-proceed:hover {
+    background: #EC7F13;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .evaluation-form {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .evaluation-container h1 {
+        font-size: 2rem;
+    }
+
+    .value-amount {
+        font-size: 2.5rem;
+    }
+}
+
+/* Authentication Prompt */
+.evaluation-auth-prompt {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.evaluation-auth-prompt h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1a1d29;
+    margin-bottom: 1rem;
+}
+
+.evaluation-auth-subtitle {
+    font-size: 1rem;
+    color: #5a6c7d;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.evaluation-auth-prompt .btn-evaluate {
+    background-color: #EC7F13;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(236, 127, 19, 0.2);
+}
+
+.evaluation-auth-prompt .btn-evaluate:hover {
+    background-color: #d46d0a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(236, 127, 19, 0.3);
+}
+
+.evaluation-auth-secondary {
+    font-size: 0.95rem;
+    color: #5a6c7d;
+    font-weight: 500;
+}
+
+.evaluation-auth-link {
+    color: #EC7F13;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.evaluation-auth-link:hover {
+    color: #1a1d29;
+    text-decoration: underline;
+}

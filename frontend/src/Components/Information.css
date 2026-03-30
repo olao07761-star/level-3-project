@@ -1,0 +1,253 @@
+/* Information Section */
+.information-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.information-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Grid Layout */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Card Styling */
+.info-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.info-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(236, 127, 19, 0.15);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.info-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Title */
+.info-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1d29;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+/* Description */
+.info-description {
+    font-size: 1rem;
+    color: #5a6c7d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Link */
+.info-link {
+    color: #EC7F13;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.info-link:hover {
+    color: #d97312;
+    transform: translateX(3px);
+}
+
+.info-link.call-now {
+    color: #EC7F13;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .information-container {
+        padding: 0 1.5rem;
+    }
+
+    .info-grid {
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        padding: 2rem;
+    }
+
+    .info-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .info-title {
+        font-size: 1.2rem;
+    }
+
+    .info-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .information-section {
+        padding: 3rem 0;
+    }
+
+    .information-container {
+        padding: 0 1.25rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.8rem;
+    }
+
+    .info-icon {
+        font-size: 2.2rem;
+        width: 55px;
+        height: 55px;
+        margin-bottom: 1.2rem;
+    }
+
+    .info-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .info-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .info-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .info-link {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .information-section {
+        padding: 2rem 0;
+    }
+
+    .information-container {
+        padding: 0 1rem;
+    }
+
+    .info-grid {
+        gap: 1.2rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .info-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .info-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .info-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .information-section {
+        padding: 1.5rem 0;
+    }
+
+    .information-container {
+        padding: 0 0.75rem;
+    }
+
+    .info-grid {
+        gap: 1rem;
+    }
+
+    .info-card {
+        padding: 1.2rem;
+    }
+
+    .info-icon {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+        margin-bottom: 0.8rem;
+    }
+
+    .info-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .info-title {
+        font-size: 1rem;
+        font-weight: 800;
+        margin-bottom: 0.4rem;
+    }
+
+    .info-description {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .info-link {
+        font-size: 0.85rem;
+    }
+}

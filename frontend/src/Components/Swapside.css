@@ -1,0 +1,541 @@
+/* Swap Portal Section */
+.swap-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    min-height: 100vh;
+}
+
+.swap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.swap-header {
+    margin-bottom: 3rem;
+    border-top: 3px solid #EC7F13;
+    padding-top: 2rem;
+}
+
+.swap-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #1a1d29;
+    margin-bottom: 0.5rem;
+}
+
+.swap-subtitle {
+    font-size: 1rem;
+    color: #5a6c7d;
+    font-weight: 500;
+}
+
+/* Steps Navigation */
+.swap-steps {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: flex-start;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    color: #666;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step.active .step-number {
+    background-color: #EC7F13;
+    color: white;
+}
+
+.step-label {
+    font-weight: 600;
+    color: #5a6c7d;
+    font-size: 0.9rem;
+}
+
+.step.active .step-label {
+    color: #1a1d29;
+}
+
+/* Main Content */
+.swap-content {
+    display: flex;
+    gap: 3rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar */
+.swap-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #1a1d29;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.category-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #5a6c7d;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.category-btn:hover {
+    border-color: #EC7F13;
+    background-color: #fff8f3;
+}
+
+.category-btn.active {
+    background-color: #EC7F13;
+    color: white;
+    border-color: #EC7F13;
+}
+
+.category-icon {
+    font-size: 1.5rem;
+}
+
+.category-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+}
+
+.category-btn:hover .category-image,
+.category-btn.active .category-image {
+    filter: grayscale(0%);
+}
+
+/* Main Content Area */
+.swap-main {
+    flex: 1;
+}
+
+.brand-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1a1d29;
+    margin-bottom: 1.5rem;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 2rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 140px;
+}
+
+.brand-card:hover {
+    border-color: #EC7F13;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(236, 127, 19, 0.15);
+}
+
+.brand-card.active {
+    border-color: #EC7F13;
+    background-color: #fff8f3;
+}
+
+.brand-icon {
+    font-size: 2.5rem;
+}
+
+.brand-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(50%);
+    transition: filter 0.3s ease;
+}
+
+.brand-card:hover .brand-logo,
+.brand-card.active .brand-logo {
+    filter: grayscale(0%);
+}
+
+.brand-name {
+    font-weight: 700;
+    color: #1a1d29;
+    font-size: 1rem;
+}
+
+/* Help Section */
+.help-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.help-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a1d29;
+    margin: 0;
+}
+
+.help-text {
+    font-size: 0.9rem;
+    color: #5a6c7d;
+    margin: 0;
+    font-weight: 500;
+}
+
+.btn-custom-swap {
+    background-color: #1a1d29;
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.btn-custom-swap:hover {
+    background-color: #2d3142;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 29, 41, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .swap-container {
+        padding: 0 1.5rem;
+    }
+
+    .swap-content {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .brand-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .brand-card {
+        padding: 1.5rem;
+        min-height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swap-section {
+        padding: 3rem 0;
+    }
+
+    .swap-title {
+        font-size: 2rem;
+    }
+
+    .swap-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .swap-sidebar {
+        width: 100%;
+    }
+
+    .category-list {
+        flex-direction: row;
+        gap: 0.6rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .category-btn {
+        flex-shrink: 0;
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .category-image {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .brand-card {
+        padding: 1.5rem;
+    }
+
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .help-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .btn-custom-swap {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .swap-container {
+        padding: 0 1rem;
+    }
+
+    .swap-header {
+        margin-bottom: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .swap-title {
+        font-size: 1.8rem;
+    }
+
+    .swap-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .swap-steps {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.95rem;
+    }
+
+    .step-label {
+        font-size: 0.8rem;
+    }
+
+    .swap-content {
+        padding: 1.2rem;
+        gap: 1rem;
+        border-radius: 8px;
+    }
+
+    .swap-sidebar {
+        margin-bottom: 1.5rem;
+    }
+
+    .sidebar-title {
+        margin-bottom: 1rem;
+    }
+
+    .category-list {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .category-image {
+        width: 35px;
+        height: 35px;
+    }
+
+    .category-icon {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .brand-card {
+        padding: 1.2rem;
+        min-height: 120px;
+        gap: 0.6rem;
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-card {
+        padding: 1.2rem;
+        min-height: 120px;
+        gap: 0.6rem;
+    }
+
+    .brand-icon {
+        font-size: 2rem;
+    }
+
+    .brand-name {
+        font-size: 0.9rem;
+    }
+
+    .help-section {
+        padding: 1.5rem;
+    }
+
+    .help-title {
+        font-size: 0.95rem;
+    }
+
+    .help-text {
+        font-size: 0.8rem;
+    }
+
+    .btn-custom-swap {
+        padding: 0.75rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .swap-container {
+        padding: 0 0.75rem;
+    }
+
+    .swap-title {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .swap-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .swap-steps {
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .step-label {
+        display: none;
+    }
+
+    .swap-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .category-list {
+        gap: 0.4rem;
+    }
+
+    .category-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .category-image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .brand-card {
+        padding: 1rem;
+        min-height: 100px;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .help-section {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .btn-custom-swap {
+        width: 100%;
+    }
+}
