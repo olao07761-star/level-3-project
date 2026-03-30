@@ -16,11 +16,17 @@ export const DeviceProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const API_URL = 'http://localhost:5555/api/devices';
+    const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5555' : '');
+    const API_URL = `${API_BASE_URL}/api/devices`;
 
     // Fetch all devices
     const fetchDevices = async () => {
         try {
+            if (!API_BASE_URL) {
+                setError('VITE_API_URL is not configured for production');
+                return;
+            }
+
             setLoading(true);
             setError(null);
             const response = await axios.get(API_URL);
@@ -38,6 +44,10 @@ export const DeviceProvider = ({ children }) => {
     // Create new device
     const createDevice = async (deviceData) => {
         try {
+            if (!API_BASE_URL) {
+                return { success: false, message: 'VITE_API_URL is not configured for production' };
+            }
+
             setLoading(true);
             setError(null);
             const response = await axios.post(API_URL, deviceData);
@@ -58,6 +68,10 @@ export const DeviceProvider = ({ children }) => {
     // Update device
     const updateDevice = async (id, deviceData) => {
         try {
+            if (!API_BASE_URL) {
+                return { success: false, message: 'VITE_API_URL is not configured for production' };
+            }
+
             setLoading(true);
             setError(null);
             const response = await axios.put(`${API_URL}/${id}`, deviceData);
@@ -80,6 +94,10 @@ export const DeviceProvider = ({ children }) => {
     // Delete device
     const deleteDevice = async (id) => {
         try {
+            if (!API_BASE_URL) {
+                return { success: false, message: 'VITE_API_URL is not configured for production' };
+            }
+
             setLoading(true);
             setError(null);
             const response = await axios.delete(`${API_URL}/${id}`);

@@ -21,7 +21,9 @@ const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http:
 
 app.use(cors({
     origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
+        const isVercelOrigin = origin && /https:\/\/[a-z0-9-]+\.vercel\.app$/i.test(origin);
+
+        if (!origin || allowedOrigins.includes(origin) || isVercelOrigin) {
             return callback(null, true);
         }
 
