@@ -13,25 +13,54 @@ const jwt = require("jsonwebtoken");
 
 
 const port = process.env.PORT
-const MONGO_URL = process.env.URL
+const MONGO_URL = process.env.MONGO_URL || process.env.URL
+const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173,http://localhost:5174')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
 
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
 
-app.use(cors({ origin: 'http://localhost:5174' })); // your React app's URL
+        return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+}));
 app.use(express.json());
 
 
-mongoose.connect(MONGO_URL, {
-    serverSelectionTimeoutMS: 5000,
-    socketTimeoutMS: 45000,
-    retryWrites: true,
-})
-    .then(() => {
+const startServer = async () => {
+    if (!MONGO_URL) {
+        console.error('DB failed to connect: MONGO_URL is missing in Backend/.env');
+        process.exit(1);
+    }
+
+    try {
+        await mongoose.connect(MONGO_URL, {
+            serverSelectionTimeoutMS: 20000,
+            connectTimeoutMS: 20000,
+            socketTimeoutMS: 45000,
+            retryWrites: true,
+        });
+
         console.log('DB connected to MongoDB');
-    })
-    .catch((error) => {
-        console.log('DB failed to connect', error);
-        console.log('MONGO_URL:', MONGO_URL);
-    });
+        app.listen(port, () => {
+            console.log(`Server is running on http://localhost:${port}`);
+        });
+    } catch (error) {
+        console.error('DB failed to connect:', error.message);
+
+        if (error.message && error.message.toLowerCase().includes("isn't whitelisted")) {
+            console.error('MongoDB Atlas network issue: add your current IP in Atlas Network Access or allow 0.0.0.0/0 for development.');
+        }
+
+        console.error('Retrying MongoDB connection in 5 seconds...');
+        setTimeout(startServer, 5000);
+    }
+};
 
 
 
@@ -369,6 +398,4 @@ app.delete('/api/devices/:id', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-})
+startServer();
