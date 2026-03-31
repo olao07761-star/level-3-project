@@ -8,6 +8,23 @@
     z-index: 100;
 }
 
+.navbar.admin-navbar {
+    background: #1f2937;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.admin-navbar .nav-menu a {
+    color: #f3f4f6;
+}
+
+.navbar.admin-navbar .nav-menu a:hover {
+    color: #EC7F13;
+}
+
+.navbar.admin-navbar .hamburger-menu span {
+    background-color: #f3f4f6;
+}
+
 .navbar-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -212,6 +229,11 @@
     padding: 0.5rem 1rem;
     background-color: #f5f5f5;
     border-radius: 20px;
+}
+
+.admin-greeting {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
 }
 
 .logout-btn {
