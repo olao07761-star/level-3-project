@@ -62,7 +62,7 @@ const Navbar = () => {
                         <li><a href="#" onClick={(e) => { handleProtectedLink(e, '/dashboard'); closeMenu(); }}>Sell</a></li>
                         <li><Link to="/evaluation" onClick={closeMenu}>Swap Portal</Link></li>
                         <li><a href="#contact" onClick={(e) => { handleContactClick(e); closeMenu(); }}>Contact</a></li>
-                        <li><Link to="/admin" style={{ color: '#EC7F13', fontWeight: 'bold' }} onClick={closeMenu}>Admin</Link></li>
+                        
                     </ul>
                 </div>
 
